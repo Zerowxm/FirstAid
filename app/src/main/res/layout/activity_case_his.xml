@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="wxm.com.firstaid.CaseHisActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+         >
+
+        <include layout="@layout/toolbar"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/blue"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_marginTop="56dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="18sp"
+                android:textColor="@color/blue"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="慢性疾病"/>
+            <ImageView
+                android:tint="@color/blue"
+                android:id="@+id/add_slow_ill"
+                android:src="@drawable/ic_add"
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/white"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
+            android:id="@+id/recyclerview_list_slow_i"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:background="@color/white"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_marginTop="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@color/blue"
+                android:layout_height="wrap_content"
+                android:text="突發性疾病"/>
+            <ImageView
+                android:id="@+id/add_fast_ill"
+                android:src="@drawable/ic_add"
+                android:tint="@color/blue"
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/white"
+            android:paddingLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/recyclerview_list_fast_i"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

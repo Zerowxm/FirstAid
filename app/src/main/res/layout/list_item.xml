@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/swipe_item"
+    >
+    <!-- Bottom View Start-->
+    <LinearLayout
+        android:background="@color/primary_light"
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <!--What you want to show-->
+        <TextView
+            android:textSize="17sp"
+            android:padding="8dp"
+            android:id="@+id/delete"
+            android:textColor="@color/white"
+            android:background="@color/primary_light"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="删除"
+            />
+    </LinearLayout>
+    <!-- Bottom View End-->
+
+    <!-- Surface View Start -->
+    <LinearLayout
+        android:elevation="5dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="17sp"
+            android:textColor="@color/primary_text"
+            android:id="@+id/ill_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="病"/>
+        <!--What you want to show in SurfaceView-->
+    </LinearLayout>
+    <!-- Surface View End -->
+</com.daimajia.swipe.SwipeLayout>

@@ -1,0 +1,53 @@
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_help"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:elevation="0dp"
+
+    >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioGroup
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:id="@+id/rg"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rb_bg_left"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="6dip"
+                    android:paddingTop="6dip"
+                    android:text="實時推送"
+                    android:checked="true"
+                    android:textColor="@drawable/title_text_sel" />
+
+                <RadioButton
+                    android:id="@+id/rb0"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rb_bg_right"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="6dip"
+                    android:paddingTop="6dip"
+                    android:text="地圖模式"
+                    android:textColor="@drawable/title_text_sel" />
+
+
+            </RadioGroup>
+
+        </RelativeLayout>
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="48dp"
+    android:background="@color/white"
+    tools:context="wxm.com.firstaid.WelcActivity">
+
+    <TextView
+        android:textColor="@color/primary_dark"
+        android:text="緊急救援平台"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_above="@+id/SubTitle"
+        android:id="@+id/Title"
+        />
+
+    <ImageView
+        android:scaleType="fitStart"
+        android:layout_above="@id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg"/>
+
+    <TextView
+        android:layout_alignStart="@id/Title"
+        android:layout_alignLeft="@id/Title"
+        android:layout_above="@+id/panel"
+        android:text="施救者也可能是被救者\n彼此緊密相連"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColor="#000000"
+        android:id="@+id/SubTitle"
+        android:textSize="24sp"
+         />
+
+    <LinearLayout
+        android:layout_alignStart="@id/Title"
+        android:layout_alignLeft="@id/Title"
+        android:layout_marginRight="48dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="56dp"
+        android:id="@+id/panel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="46dp"
+        >
+        <TextView
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/to_login"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/primary"
+            android:text="登錄"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary"/>
+
+        <TextView
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/to_sign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="注冊"/>
+    </LinearLayout>
+
+</RelativeLayout>

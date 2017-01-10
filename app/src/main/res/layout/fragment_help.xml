@@ -1,0 +1,50 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <include layout="@layout/toolbar"/>
+
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp"
+                android:background="@color/gree_dark"
+                android:id="@+id/appbar_help"
+                android:paddingRight="48dp"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <include layout="@layout/help_app_bar" />
+
+            </android.support.design.widget.AppBarLayout>
+        </RelativeLayout>
+
+
+        <WebView
+
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></WebView>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

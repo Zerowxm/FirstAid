@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="32dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_centerInParent="true"
+    tools:context="wxm.com.firstaid.LoginActivity">
+
+
+
+    <TextView
+        android:text="緊急救援平台"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/Title"
+        android:textSize="16sp"
+        android:textColor="@color/primary_dark"
+         />
+
+    <TextView
+        android:textColor="@color/dark_text"
+        android:textSize="18sp"
+        android:text="施救者也可能是被救者\n彼此緊密相連"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:id="@+id/SubTitle"
+        android:layout_below="@+id/Title"
+         />
+
+    <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/SubTitle"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="32dp"
+        android:id="@+id/phoneWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="區號+手機號碼" />
+    </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordWrapper"
+            >
+
+            <EditText
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="密碼" />
+
+        </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:textColor="@color/primary"
+            android:id="@+id/forget_psw"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘記密碼"
+            android:layout_gravity="right"
+            android:textSize="12sp"
+            />
+        <Button
+            android:background="@drawable/border_btn"
+            android:textColor="@color/white"
+            android:id="@+id/to_login"
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登錄"/>
+
+        <TextView
+            android:id="@id/to_sign"
+            android:layout_marginTop="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="還沒有賬戶？點擊注冊"/>
+    </LinearLayout>
+
+</RelativeLayout>

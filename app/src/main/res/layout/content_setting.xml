@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="56dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:paddingTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="基本資料"/>
+    <LinearLayout
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="@color/white"
+
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="56dp"
+            android:textColor="@color/dark_text"
+            android:text="頭像"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_gravity="center"
+            android:id="@+id/user_photo"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+        <RelativeLayout
+            android:id="@+id/c_photo"
+
+            android:layout_gravity="center|right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:padding="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_marginLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cardview_shadow_start_color"/>
+    <LinearLayout
+        android:background="@color/white"
+
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="56dp"
+            android:textColor="@color/dark_text"
+            android:text="姓名"/>
+        <TextView
+            android:textSize="16sp"
+
+            android:id="@+id/user_name"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="13"
+            android:text="dddddddddddddddddddddddddddd"/>
+        <RelativeLayout
+            android:id="@+id/c_name"
+
+            android:layout_weight="1"
+            android:layout_gravity="center|right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:padding="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_marginLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cardview_shadow_start_color"/>
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="56dp"
+            android:textColor="@color/dark_text"
+            android:text="性别"/>
+        <TextView
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:id="@+id/user_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dd"/>
+        <RelativeLayout
+            android:id="@+id/c_gender"
+
+            android:layout_gravity="center|right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:padding="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_marginLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cardview_shadow_start_color"/>
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="56dp"
+            android:textColor="@color/dark_text"
+            android:text="年齡"/>
+        <TextView
+            android:textSize="16sp"
+
+            android:layout_gravity="center"
+            android:id="@+id/user_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dd"/>
+        <RelativeLayout
+            android:id="@+id/c_age"
+
+            android:layout_gravity="center|right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:padding="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:textSize="16sp"
+        android:paddingLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="身份設置"/>
+
+    <Switch
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:background="@color/white"
+        android:textColor="@color/dark_text"
+        android:layout_marginTop="16dp"
+        android:text="我願意成為施救者"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_will" />
+    </LinearLayout>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:textSize="20sp"
+        android:background="@drawable/border_btn"
+        android:textColor="@color/white"
+        android:id="@+id/to_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="登出"/>
+
+</RelativeLayout>
