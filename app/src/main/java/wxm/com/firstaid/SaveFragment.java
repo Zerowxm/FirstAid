@@ -7,6 +7,8 @@ import android.content.Context;
 import android.graphics.Point;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -16,8 +18,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Display;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -163,7 +167,7 @@ public class SaveFragment extends Fragment {
         });
         startWebView(own_url);
 
-
+        TipHelper.createAlarm(getActivity());
 
         return v;
     }
@@ -204,7 +208,9 @@ public class SaveFragment extends Fragment {
         int width = size.x;
         int height = size.y;
         Log.d("size",""+width+" "+height);
-        if (width>1000){
+        if (width>1200){
+            webView.setInitialScale(310);
+        }else if(width > 1000){
             webView.setInitialScale(290);
         }
         else if(width > 800){
@@ -238,14 +244,19 @@ public class SaveFragment extends Fragment {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!TipHelper.is_long){
-                    TipHelper.is_long=true;
-                    TipHelper.flag= Notification.FLAG_INSISTENT;
+//                if (!TipHelper.is_long){
+//                    TipHelper.is_long=true;
+//                    TipHelper.flag= Notification.FLAG_INSISTENT;
+//                }else {
+//                    TipHelper.is_long=false;
+//                    TipHelper.flag=Notification.FLAG_AUTO_CANCEL;
+//                }
+//                TipHelper.PlaySound(getActivity());
+                if (!TipHelper.mMediaPlayer.isPlaying()){
+                    TipHelper.startAlarm();
                 }else {
-                    TipHelper.is_long=false;
-                    TipHelper.flag=Notification.FLAG_AUTO_CANCEL;
+                    TipHelper.stopAlarm();
                 }
-                TipHelper.PlaySound(getActivity());
 
             }
         });
@@ -254,10 +265,11 @@ public class SaveFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-        if (TipHelper.flag==Notification.FLAG_INSISTENT){
+    /*    if (TipHelper.flag==Notification.FLAG_INSISTENT){
             TipHelper.flag=Notification.FLAG_AUTO_CANCEL;
             TipHelper.PlaySound(getActivity());
-        }
+        }*/
+        TipHelper.stopAlarm();
 
 
     }
@@ -291,8 +303,9 @@ public class SaveFragment extends Fragment {
                 }else {
                     appBarLayout.setVisibility(View.VISIBLE);
                     appBarLayout_red.setVisibility(View.INVISIBLE);
-                    TipHelper.flag=Notification.FLAG_AUTO_CANCEL;
-                    TipHelper.PlaySound(getActivity());
+//                    TipHelper.flag=Notification.FLAG_AUTO_CANCEL;
+//                    TipHelper.PlaySound(getActivity());
+                    TipHelper.stopAlarm();
                     relativeLayout.setVisibility(View.VISIBLE);
                     imageButton.setVisibility(View.GONE);
 
@@ -304,7 +317,36 @@ public class SaveFragment extends Fragment {
                     }
                 }
                 view.loadUrl(url);
+
+               /* webView.setOnKeyListener(new View.OnKeyListener() {
+                    @Override
+                    public boolean onKey(View v, int keyCode, KeyEvent event) {
+                        if (keyCode == KeyEvent.KEYCODE_BACK
+                                && event.getAction() == MotionEvent.ACTION_UP
+                                && webView.canGoBack()) {
+                            handler.sendEmptyMessage(1);
+                            return true;
+                        }
+
+                        return false;
+                    }
+                });*/
                 return true;
+            }
+
+            private Handler handler = new Handler(){
+                @Override
+                public void handleMessage(Message message) {
+                    switch (message.what) {
+                        case 1:{
+                            webViewGoBack();
+                        }break;
+                    }
+                }
+            };
+
+            private void webViewGoBack(){
+                webView.goBack();
             }
 
             @Override
